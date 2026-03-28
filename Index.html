@@ -1,0 +1,579 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Пояснительная записка | ООО «Пример» | 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f9;
+            color: #1a2634;
+            line-height: 1.45;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Контейнер с мягкой тенью */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* Внутренний отступ */
+        .content-inner {
+            padding: 2rem 2rem 3rem 2rem;
+        }
+
+        /* 1. СОВРЕМЕННЫЙ ГРАДИЕНТНЫЙ ЗАГОЛОВОК С ЭФФЕКТОМ ПРОЗРАЧНОСТИ ТЕКСТА */
+        .hero-section {
+            background: linear-gradient(135deg, #0B2B40 0%, #1A4D5F 50%, #2C7A6E 100%);
+            border-radius: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 2.8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+        }
+
+        .gradient-headline {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #FFFFFF, #D1FAE5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 0.75rem;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: rgba(255,255,245,0.9);
+            border-top: 1px solid rgba(255,255,255,0.25);
+            display: inline-block;
+            padding-top: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        /* общая стилистика */
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem 0;
+            letter-spacing: -0.3px;
+            background: linear-gradient(120deg, #1F5E6B, #2C8C7A);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            border-left: 5px solid #2C8C7A;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin: 1rem 0 0.5rem;
+            color: #1F4E5C;
+        }
+
+        /* сетка навыков в виде тегов — стилизация под инструменты/методы */
+        .skills-tag-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 1.2rem 0 1rem 0;
+        }
+
+        .skill-tag {
+            background: #EFF6FF;
+            padding: 0.45rem 1.1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1C5D6E;
+            transition: all 0.25s ease;
+            border: 1px solid #CDE4EC;
+            backdrop-filter: blur(2px);
+            cursor: default;
+        }
+
+        .skill-tag i {
+            margin-right: 0.4rem;
+            font-size: 0.8rem;
+            color: #2A8B7A;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+            background: #2C8C7A;
+            color: white;
+            border-color: #2C8C7A;
+            box-shadow: 0 8px 18px rgba(44,140,122,0.2);
+        }
+        .skill-tag:hover i {
+            color: white;
+        }
+
+        /* карточки навыков с анимацией при наведении */
+        .cards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .skill-card {
+            flex: 1 1 220px;
+            background: #FDFEFC;
+            border-radius: 1.2rem;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border: 1px solid #e2edf2;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.02);
+        }
+
+        .skill-card i {
+            font-size: 2.2rem;
+            color: #2C8C7A;
+            margin-bottom: 0.7rem;
+            display: inline-block;
+        }
+
+        .skill-card h4 {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #194B51;
+        }
+
+        .skill-card p {
+            font-size: 0.85rem;
+            color: #4a6272;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            background: #ffffff;
+            border-color: #B7DFD4;
+            box-shadow: 0 20px 30px -12px rgba(44,140,122,0.25);
+        }
+
+        /* таблица для основных показателей */
+        .stats-table-wrapper {
+            overflow-x: auto;
+            margin: 1rem 0 1rem;
+            border-radius: 1rem;
+            border: 1px solid #e9f0f3;
+            background: white;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .stats-table th, .stats-table td {
+            padding: 1rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eef3f7;
+        }
+
+        .stats-table th {
+            background-color: #F3FAFC;
+            font-weight: 600;
+            color: #1F5E6B;
+        }
+
+        .stats-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .accent-value {
+            font-weight: 700;
+            color: #236B5E;
+        }
+
+        /* кейсы / выделенные блоки */
+        .cases-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .case-item {
+            flex: 1 1 280px;
+            background: #F9FDFF;
+            border-left: 6px solid #2C8C7A;
+            padding: 1.2rem 1.2rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.03);
+            transition: all 0.25s;
+        }
+
+        .case-item:hover {
+            background: #FFFFFF;
+            box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.12);
+            transform: scale(0.99);
+        }
+
+        .case-item strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #124E5A;
+            font-weight: 700;
+        }
+
+        .case-item i {
+            color: #2C8C7A;
+            margin-right: 6px;
+        }
+
+        /* секции с гибкой сеткой */
+        .two-column-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 1rem 0;
+        }
+
+        .col {
+            flex: 1 1 280px;
+            background: #FBFEF9;
+            padding: 1.2rem 1.2rem;
+            border-radius: 1.2rem;
+            border: 1px solid #e5f0f0;
+        }
+
+        .decorative-badge {
+            background: #EFF7F4;
+            display: inline-block;
+            border-radius: 60px;
+            padding: 0.2rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #236B5E;
+            margin-bottom: 0.6rem;
+        }
+
+        hr {
+            margin: 1.2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #CEE6E6, transparent);
+        }
+
+        /* акцентные элементы */
+        .accent-text {
+            background: linear-gradient(145deg, #FEF7E0, #fff5e6);
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #C97E2C;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7D8F99;
+            border-top: 1px solid #e2ecef;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .content-inner {
+                padding: 1.2rem;
+            }
+            .gradient-headline {
+                font-size: 1.8rem;
+            }
+            .hero-section {
+                padding: 1.8rem 1rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            .skill-card {
+                flex: 1 1 160px;
+            }
+            .case-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gradient-headline {
+                font-size: 1.5rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+            }
+        }
+
+        .btn-print {
+            background: white;
+            border: 1px solid #C0DFD4;
+            border-radius: 40px;
+            padding: 0.4rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1F5E6B;
+            transition: 0.2s;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-print:hover {
+            background: #EFF9F5;
+            border-color: #2C8C7A;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content-inner">
+        <!-- Кнопка печати / декоративный элемент -->
+        <div style="display: flex; justify-content: flex-end;">
+            <div class="btn-print" id="printBtn">
+                <i class="fas fa-print"></i> Версия для печати
+            </div>
+        </div>
+
+        <!-- ГРАДИЕНТНЫЙ ЗАГОЛОВОК с эффектом прозрачности -->
+        <div class="hero-section">
+            <div class="gradient-headline">Пояснительная записка<br>к бухгалтерскому балансу</div>
+            <div class="subhead">ООО «Пример» за 2025 год</div>
+        </div>
+
+        <!-- 1. Общие сведения об организации (частично в карточке) -->
+        <div class="two-column-layout">
+            <div class="col">
+                <span class="decorative-badge"><i class="fas fa-building"></i> Основные реквизиты</span>
+                <h3 style="margin-top: 0.2rem;">Общие сведения</h3>
+                <p><strong>ООО «Пример»</strong> — зарегистрировано в соответствии с законодательством РФ.</p>
+                <p><i class="fas fa-chart-line"></i> <strong>Основной вид деятельности:</strong> оптовая торговля.</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Юр. адрес:</strong> г. Москва, ул. Примерная, д. 1.</p>
+                <p><i class="fas fa-users"></i> <strong>Среднесписочная численность:</strong> 25 человек.</p>
+            </div>
+            <div class="col">
+                <span class="decorative-badge"><i class="fas fa-calculator"></i> Учётная политика</span>
+                <h3 style="margin-top: 0.2rem;">Методология учёта</h3>
+                <p>Бухгалтерский учет ведется по законодательству РФ и учётной политике организации.</p>
+                <!-- сетка тегов (инструменты / методы) -->
+                <div class="skills-tag-grid" style="margin-top: 12px;">
+                    <span class="skill-tag"><i class="fas fa-chart-simple"></i> Метод начисления</span>
+                    <span class="skill-tag"><i class="fas fa-chart-line"></i> Амортизация линейно</span>
+                    <span class="skill-tag"><i class="fas fa-boxes"></i> МПЗ по ср. себестоимости</span>
+                    <span class="skill-tag"><i class="fas fa-truck-fast"></i> Выручка по отгрузке</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Карточки навыков (акцент на финансовых компетенциях) с анимацией -->
+        <h2><i class="fas fa-chalkboard-user"></i> Ключевые компетенции</h2>
+        <div class="cards-grid">
+            <div class="skill-card">
+                <i class="fas fa-chart-pie"></i>
+                <h4>Аналитика</h4>
+                <p>Детальный анализ рентабельности и структуры затрат</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h4>Налоговый учёт</h4>
+                <p>Оптимизация налоговых обязательств</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Бюджетирование</h4>
+                <p>Контроль исполнения бюджетов подразделений</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-handshake"></i>
+                <h4>Управление долгом</h4>
+                <p>Контроль дебиторской/кредиторской задолженности</p>
+            </div>
+        </div>
+
+        <!-- 3. Основные показатели деятельности (таблица) -->
+        <h2><i class="fas fa-chart-simple"></i> Основные показатели деятельности</h2>
+        <div class="stats-table-wrapper">
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Показатель</th>
+                        <th>2025 год</th>
+                        <th>2024 год</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Выручка</strong></td>
+                        <td class="accent-value">50 000 тыс. руб.</td>
+                        <td>42 000 тыс. руб.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Себестоимость</strong></td>
+                        <td>35 000 тыс. руб.</td>
+                        <td>30 000 тыс. руб.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Чистая прибыль</strong></td>
+                        <td class="accent-value">8 000 тыс. руб.</td>
+                        <td>6 500 тыс. руб.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="background: #EFFAF5; padding: 0.7rem 1rem; border-radius: 14px; font-size: 0.9rem;">
+            <i class="fas fa-chart-line" style="color:#2C8C7A;"></i> <strong>Динамика:</strong> Рост выручки обусловлен увеличением объема продаж и расширением клиентской базы.
+        </p>
+
+        <!-- 4. Основные средства (выделенный блок кейс) -->
+        <h2><i class="fas fa-industry"></i> Основные средства</h2>
+        <div class="cases-block">
+            <div class="case-item">
+                <strong><i class="fas fa-chart-line"></i> Остаточная стоимость ОС</strong>
+                <span style="font-size: 1.4rem; font-weight: 800; color:#1C6E62;">12 000</span> тыс. руб.
+                <div style="margin-top: 8px;">на конец 2025 года</div>
+            </div>
+            <div class="case-item">
+                <strong><i class="fas fa-arrow-up"></i> Приобретено</strong>
+                + 3 000 тыс. руб. в течение года
+            </div>
+            <div class="case-item">
+                <strong><i class="fas fa-arrow-down"></i> Выбыло</strong>
+                - 500 тыс. руб. в течение года
+            </div>
+        </div>
+
+        <!-- 5. Дебиторская и кредиторская задолженность (акцент) -->
+        <h2><i class="fas fa-hand-holding-usd"></i> Дебиторская и кредиторская задолженность</h2>
+        <div class="two-column-layout">
+            <div class="col" style="background: #FEFAF2;">
+                <i class="fas fa-users" style="font-size: 1.6rem; color:#2C8C7A;"></i>
+                <h3>Дебиторская задолженность</h3>
+                <p><span class="accent-text">7 500 тыс. руб.</span> — основные дебиторы: покупатели и заказчики.</p>
+                <p><i class="fas fa-check-circle" style="color: #2A8B7A;"></i> Просроченная задолженность отсутствует.</p>
+            </div>
+            <div class="col" style="background: #FEFAF2;">
+                <i class="fas fa-hand-holding-heart" style="font-size: 1.6rem; color:#2C8C7A;"></i>
+                <h3>Кредиторская задолженность</h3>
+                <p><span class="accent-text">5 200 тыс. руб.</span> включает задолженность перед поставщиками и бюджетом.</p>
+                <p>Контроль текущих обязательств в пределах нормы.</p>
+            </div>
+        </div>
+
+        <!-- 6. Капитал и резервы + пример кейса в виде блока -->
+        <h2><i class="fas fa-coins"></i> Капитал и резервы</h2>
+        <div class="cases-block">
+            <div class="case-item">
+                <strong><i class="fas fa-chart-simple"></i> Уставный капитал</strong>
+                1 000 тыс. руб. (полностью оплачен)
+            </div>
+            <div class="case-item">
+                <strong><i class="fas fa-chart-line"></i> Нераспределенная прибыль</strong>
+                10 500 тыс. руб. на конец года
+            </div>
+        </div>
+
+        <!-- 7. События после отчетной даты + прочая информация в сетке -->
+        <div class="two-column-layout">
+            <div class="col">
+                <i class="fas fa-calendar-week" style="font-size: 1.4rem; color:#2C8C7A;"></i>
+                <h3>События после отчетной даты</h3>
+                <p>Существенных событий после отчетной даты, влияющих на финансовое положение организации, не выявлено.</p>
+            </div>
+            <div class="col">
+                <i class="fas fa-info-circle" style="font-size: 1.4rem; color:#2C8C7A;"></i>
+                <h3>Прочая информация</h3>
+                <p>Организация не имеет филиалов и представительств.</p>
+                <p>Судебные разбирательства, способные существенно повлиять на финансовое состояние, отсутствуют.</p>
+            </div>
+        </div>
+
+        <!-- Дополнительный блок: сетка инструментов в виде тегов (методы учёта и аналитики) -->
+        <hr>
+        <div style="margin: 1rem 0 0.5rem;">
+            <h2><i class="fas fa-microchip"></i> Инструменты и технологии учёта</h2>
+            <div class="skills-tag-grid">
+                <span class="skill-tag"><i class="fab fa-1c"></i> 1С:Бухгалтерия</span>
+                <span class="skill-tag"><i class="fas fa-chart-line"></i> Power BI аналитика</span>
+                <span class="skill-tag"><i class="fas fa-file-excel"></i> Excel-моделирование</span>
+                <span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> ЭДО СБИС</span>
+                <span class="skill-tag"><i class="fas fa-chart-pie"></i> МСФО-трансформация</span>
+                <span class="skill-tag"><i class="fas fa-shield-alt"></i> Внутренний контроль</span>
+            </div>
+        </div>
+
+        <!-- Ещё один акцентный пример кейса: достижения и финансовая устойчивость -->
+        <div class="cases-block" style="margin-top: 1.2rem;">
+            <div class="case-item" style="border-left-color: #E9B35F;">
+                <strong><i class="fas fa-chart-line"></i> Кейс: оптимизация себестоимости</strong>
+                Внедрение контроля закупок снизило переменные расходы на 4% в 2025 году.
+            </div>
+            <div class="case-item" style="border-left-color: #E9B35F;">
+                <strong><i class="fas fa-chart-line"></i> Кейс: автоматизация учёта</strong>
+                Переход на электронный документооборот сократил время закрытия периода на 20%.
+            </div>
+            <div class="case-item" style="border-left-color: #E9B35F;">
+                <strong><i class="fas fa-chart-line"></i> Кейс: управление дебиторкой</strong>
+                Снижение просрочки ДЗ до 0% за счёт новых условий оплаты.
+            </div>
+        </div>
+
+        <footer>
+            <i class="fas fa-file-signature"></i> Пояснительная записка подготовлена в соответствии с требованиями ПБУ 4/99 и учётной политикой ООО «Пример». 
+            Данные достоверны, актуальны на 31 декабря 2025 года.
+        </footer>
+    </div>
+</div>
+
+<script>
+    // небольшая интерактивность для печати (без лишних сложностей)
+    const printBtn = document.getElementById('printBtn');
+    if(printBtn) {
+        printBtn.addEventListener('click', () => {
+            window.print();
+        });
+    }
+</script>
+</body>
+</html>
